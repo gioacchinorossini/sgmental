@@ -18,7 +18,7 @@ export default function QrCodePage() {
   const targetUrl = "https://sgmental.netlify.app/";
   const [qrDataUrl, setQrDataUrl] = useState<string>("");
   const [copied, setCopied] = useState<boolean>(false);
-  const [qrColor, setQrColor] = useState<string>("#EAB308"); // Yellow (#EAB308)
+  const [qrColor, setQrColor] = useState<string>("#B45309"); // Deep CSAB Gold / Amber (#B45309)
   const cardRef = useRef<HTMLDivElement>(null);
 
   // Generate QR Code data URL whenever target URL or color changes
@@ -106,7 +106,7 @@ export default function QrCodePage() {
               className="inline-block px-3.5 py-0.5 rounded-full text-xs font-extrabold tracking-wide"
               style={{
                 backgroundColor:
-                  qrColor === "#EAB308"
+                  qrColor === "#B45309" || qrColor === "#EAB308"
                     ? "#FEF3C7"
                     : qrColor === "#006847"
                     ? "#E6F4EA"
@@ -114,7 +114,7 @@ export default function QrCodePage() {
                     ? "#FCE8E6"
                     : "#F1F3F4",
                 color:
-                  qrColor === "#EAB308"
+                  qrColor === "#B45309" || qrColor === "#EAB308"
                     ? "#92400E"
                     : qrColor,
               }}
@@ -206,13 +206,13 @@ export default function QrCodePage() {
             </span>
             <button
               type="button"
-              onClick={() => setQrColor("#EAB308")}
-              className={`w-6 h-6 rounded-full bg-[#EAB308] border-2 transition ${
-                qrColor === "#EAB308"
+              onClick={() => setQrColor("#B45309")}
+              className={`w-6 h-6 rounded-full bg-[#B45309] border-2 transition ${
+                qrColor === "#B45309"
                   ? "border-neutral-900 ring-2 ring-neutral-200 scale-110"
                   : "border-transparent"
               }`}
-              title="CSAB Yellow"
+              title="CSAB Deep Gold"
             />
             <button
               type="button"

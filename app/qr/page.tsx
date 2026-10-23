@@ -18,7 +18,7 @@ export default function QrCodePage() {
   const targetUrl = "https://sgmental.netlify.app/";
   const [qrDataUrl, setQrDataUrl] = useState<string>("");
   const [copied, setCopied] = useState<boolean>(false);
-  const [qrColor, setQrColor] = useState<string>("#006847"); // Default emerald green matching the reference image
+  const [qrColor, setQrColor] = useState<string>("#EAB308"); // Yellow (#EAB308)
   const cardRef = useRef<HTMLDivElement>(null);
 
   // Generate QR Code data URL whenever target URL or color changes
@@ -106,12 +106,17 @@ export default function QrCodePage() {
               className="inline-block px-3.5 py-0.5 rounded-full text-xs font-extrabold tracking-wide"
               style={{
                 backgroundColor:
-                  qrColor === "#006847"
+                  qrColor === "#EAB308"
+                    ? "#FEF3C7"
+                    : qrColor === "#006847"
                     ? "#E6F4EA"
                     : qrColor === "#800000"
                     ? "#FCE8E6"
                     : "#F1F3F4",
-                color: qrColor,
+                color:
+                  qrColor === "#EAB308"
+                    ? "#92400E"
+                    : qrColor,
               }}
             >
               CSAB
@@ -199,6 +204,16 @@ export default function QrCodePage() {
             <span className="text-[11px] font-semibold text-neutral-400">
               QR Theme:
             </span>
+            <button
+              type="button"
+              onClick={() => setQrColor("#EAB308")}
+              className={`w-6 h-6 rounded-full bg-[#EAB308] border-2 transition ${
+                qrColor === "#EAB308"
+                  ? "border-neutral-900 ring-2 ring-neutral-200 scale-110"
+                  : "border-transparent"
+              }`}
+              title="CSAB Yellow"
+            />
             <button
               type="button"
               onClick={() => setQrColor("#006847")}

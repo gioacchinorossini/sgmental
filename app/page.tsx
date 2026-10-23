@@ -247,27 +247,41 @@ export default function EventFeedbackPage() {
     <div className="min-h-screen bg-white flex flex-col justify-between py-4 sm:py-7 px-3.5 sm:px-6">
       {/* Unified Institutional & Event Header */}
       <header className="max-w-md sm:max-w-lg md:max-w-xl w-full mx-auto mb-3 text-center">
-        {/* All 3 Logos Grouped with CSAB at the Center */}
-        <div className="flex items-center justify-center gap-3 sm:gap-4 mb-2.5">
+        {/* All 5 Logos Grouped with CSAB at the Center */}
+        <div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4 mb-2.5 flex-wrap">
+          <div className="relative" title="Eagle Emblem">
+            <img
+              src="/logos/eagle.png"
+              alt="Eagle Emblem"
+              className="w-9 h-9 sm:w-12 sm:h-12 md:w-14 md:h-14 object-contain drop-shadow-xs"
+            />
+          </div>
           <div className="relative" title="Academic / Department Emblem">
             <img
               src="/logos/dept-emblem.png"
               alt="Department Emblem"
-              className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain drop-shadow-xs"
+              className="w-9 h-9 sm:w-12 sm:h-12 md:w-14 md:h-14 object-contain drop-shadow-xs"
             />
           </div>
           <div className="relative" title="Colegio San Agustin - Bacolod">
             <img
               src="/logos/csab.png"
               alt="Colegio San Agustin - Bacolod Seal"
-              className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain drop-shadow-xs"
+              className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain drop-shadow-xs"
             />
           </div>
           <div className="relative" title="Dare to be Event">
             <img
-              src="/logos/event-heart.jpg"
+              src="/logos/event-heart.png"
               alt="Dare to be Heart"
-              className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-cover rounded-2xl shadow-xs border border-rose-200/90 ring-1 ring-black/5"
+              className="w-9 h-9 sm:w-12 sm:h-12 md:w-14 md:h-14 object-contain drop-shadow-xs"
+            />
+          </div>
+          <div className="relative" title="College of Liberal Arts Sciences and Education">
+            <img
+              src="/logos/usa-clase.png"
+              alt="CLASE Seal"
+              className="w-9 h-9 sm:w-12 sm:h-12 md:w-14 md:h-14 object-contain drop-shadow-xs"
             />
           </div>
         </div>
@@ -306,21 +320,31 @@ export default function EventFeedbackPage() {
         {isSubmitted ? (
           <div className="bg-white rounded-[24px] sm:rounded-[32px] p-6 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-neutral-100 text-center animate-scale-in">
             {/* Logos grouped together on success screen */}
-            <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4">
+            <div className="flex items-center justify-center gap-2 sm:gap-3 mb-4 flex-wrap">
+              <img
+                src="/logos/eagle.png"
+                alt="Eagle Emblem"
+                className="w-9 h-9 sm:w-11 sm:h-11 object-contain drop-shadow-2xs"
+              />
               <img
                 src="/logos/dept-emblem.png"
                 alt="Department Emblem"
-                className="w-11 h-11 sm:w-13 sm:h-13 object-contain drop-shadow-2xs"
+                className="w-9 h-9 sm:w-11 sm:h-11 object-contain drop-shadow-2xs"
               />
               <img
                 src="/logos/csab.png"
                 alt="CSAB Seal"
-                className="w-13 h-13 sm:w-16 sm:h-16 object-contain drop-shadow-2xs"
+                className="w-12 h-12 sm:w-14 sm:h-14 object-contain drop-shadow-2xs"
               />
               <img
-                src="/logos/event-heart.jpg"
+                src="/logos/event-heart.png"
                 alt="Event Logo"
-                className="w-11 h-11 sm:w-13 sm:h-13 object-cover rounded-xl shadow-2xs border border-rose-200/80"
+                className="w-9 h-9 sm:w-11 sm:h-11 object-contain drop-shadow-2xs"
+              />
+              <img
+                src="/logos/usa-clase.png"
+                alt="CLASE Seal"
+                className="w-9 h-9 sm:w-11 sm:h-11 object-contain drop-shadow-2xs"
               />
             </div>
 

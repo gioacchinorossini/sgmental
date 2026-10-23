@@ -313,21 +313,31 @@ export default function AdminPage() {
       <div className="min-h-screen bg-white flex flex-col justify-between py-8 px-4 sm:px-6">
         <div className="max-w-md w-full mx-auto my-auto">
           {/* Grouped Logos */}
-          <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4">
+          <div className="flex items-center justify-center gap-2 sm:gap-3 mb-4 flex-wrap">
+            <img
+              src="/logos/eagle.png"
+              alt="Eagle Emblem"
+              className="w-10 h-10 sm:w-12 sm:h-12 object-contain drop-shadow-xs"
+            />
             <img
               src="/logos/dept-emblem.png"
               alt="Department Emblem"
-              className="w-12 h-12 sm:w-14 sm:h-14 object-contain drop-shadow-xs"
+              className="w-10 h-10 sm:w-12 sm:h-12 object-contain drop-shadow-xs"
             />
             <img
               src="/logos/csab.png"
               alt="Colegio San Agustin - Bacolod Seal"
-              className="w-16 h-16 sm:w-20 sm:h-20 object-contain drop-shadow-xs"
+              className="w-14 h-14 sm:w-18 sm:h-18 object-contain drop-shadow-xs"
             />
             <img
-              src="/logos/event-heart.jpg"
+              src="/logos/event-heart.png"
               alt="Dare to be Heart"
-              className="w-12 h-12 sm:w-14 sm:h-14 object-cover rounded-2xl shadow-xs border border-rose-200/90 ring-1 ring-black/5"
+              className="w-10 h-10 sm:w-12 sm:h-12 object-contain drop-shadow-xs"
+            />
+            <img
+              src="/logos/usa-clase.png"
+              alt="USA CLASE Seal"
+              className="w-10 h-10 sm:w-12 sm:h-12 object-contain drop-shadow-xs"
             />
           </div>
 
@@ -436,21 +446,31 @@ export default function AdminPage() {
         <header className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-neutral-100 pb-5">
           <div className="flex items-center gap-3.5">
             {/* Grouped Logos with CSAB at the Center */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              <img
+                src="/logos/eagle.png"
+                alt="Eagle Emblem"
+                className="w-7 h-7 sm:w-8 sm:h-8 object-contain drop-shadow-xs"
+              />
               <img
                 src="/logos/dept-emblem.png"
                 alt="Emblem"
-                className="w-9 h-9 object-contain"
+                className="w-7 h-7 sm:w-8 sm:h-8 object-contain drop-shadow-xs"
               />
               <img
                 src="/logos/csab.png"
                 alt="CSAB Seal"
-                className="w-12 h-12 object-contain"
+                className="w-10 h-10 sm:w-12 sm:h-12 object-contain drop-shadow-xs"
               />
               <img
-                src="/logos/event-heart.jpg"
+                src="/logos/event-heart.png"
                 alt="Event Logo"
-                className="w-9 h-9 object-cover rounded-xl border border-rose-200/80"
+                className="w-7 h-7 sm:w-8 sm:h-8 object-contain drop-shadow-xs"
+              />
+              <img
+                src="/logos/usa-clase.png"
+                alt="CLASE Seal"
+                className="w-7 h-7 sm:w-8 sm:h-8 object-contain drop-shadow-xs"
               />
             </div>
 

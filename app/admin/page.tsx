@@ -190,8 +190,10 @@ export default function AdminPage() {
       return {
         total: 0,
         overallAvg: "0.0",
-        questionAverages: [0, 0, 0, 0, 0],
-        schoolBreakdown: {},
+        topAspectName: "Event Success",
+        topAspectScore: "0.0",
+        questionAverages: ["0.0", "0.0", "0.0", "0.0", "0.0"],
+        schoolBreakdown: {} as Record<string, { count: number; scoreSum: number }>,
       };
     }
 
@@ -231,11 +233,19 @@ export default function AdminPage() {
       questionCounts[i] ? (sum / questionCounts[i]).toFixed(1) : "0.0"
     );
 
+    const numericAvgs = questionAverages.map(Number);
+    const maxScore = Math.max(...numericAvgs);
+    const bestIndex = numericAvgs.indexOf(maxScore);
+    const topAspectName = QUESTIONS[bestIndex >= 0 ? bestIndex : 0]?.short || "Event Success";
+    const topAspectScore = maxScore > 0 ? maxScore.toFixed(1) : "0.0";
+
     const overallAvg = (totalScoreSum / total).toFixed(1);
 
     return {
       total,
       overallAvg,
+      topAspectName,
+      topAspectScore,
       questionAverages,
       schoolBreakdown: schools,
     };
@@ -551,14 +561,10 @@ export default function AdminPage() {
               <Award className="w-4 h-4 text-[#800000]" />
             </div>
             <p className="text-sm sm:text-base font-extrabold text-neutral-900 truncate mt-1">
-              {QUESTIONS[
-                stats.questionAverages.indexOf(
-                  Math.max(...stats.questionAverages.map(Number)).toFixed(1)
-                )
-              ]?.short || "Event Success"}
+              {stats.topAspectName}
             </p>
             <span className="text-[11px] text-neutral-500 block">
-              ⭐ {Math.max(...stats.questionAverages.map(Number)).toFixed(1)} / 5.0
+              ⭐ {stats.topAspectScore} / 5.0
             </span>
           </div>
 

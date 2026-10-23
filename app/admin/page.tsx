@@ -22,6 +22,7 @@ import {
   Trash2,
   AlertTriangle,
   X,
+  QrCode,
 } from "lucide-react";
 
 interface EvaluationRecord {
@@ -473,6 +474,15 @@ export default function AdminPage() {
               <RefreshCw className={`w-3.5 h-3.5 ${loading ? "animate-spin" : ""}`} />
               <span>Refresh</span>
             </button>
+
+            <Link
+              href="/qr"
+              className="text-xs font-semibold px-3 py-2 rounded-full border border-neutral-200 bg-white hover:bg-neutral-50 flex items-center gap-1.5 transition text-neutral-700"
+              title="View & print event QR code"
+            >
+              <QrCode className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">QR Code</span>
+            </Link>
 
             <button
               onClick={handleExportCSV}
